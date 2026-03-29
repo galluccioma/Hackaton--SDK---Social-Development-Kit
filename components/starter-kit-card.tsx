@@ -16,10 +16,14 @@ const difficultyConfig: Record<Difficulty, { label: string; className: string }>
 
 interface StarterKitCardProps {
   kit: StarterKit
+  customUrl?: string // <-- Prop facoltativa aggiunta
 }
 
-export function StarterKitCard({ kit }: StarterKitCardProps) {
+export function StarterKitCard({ kit, customUrl }: StarterKitCardProps) {
   const difficulty = difficultyConfig[kit.difficulty]
+  
+  // Determina l'URL finale: se customUrl è presente lo usa, altrimenti usa l'ID
+  const finalHref = customUrl || `/starter-kit/${kit.id}`
 
   return (
     <Card className="group overflow-hidden transition-all hover:shadow-lg">
@@ -53,7 +57,8 @@ export function StarterKitCard({ kit }: StarterKitCardProps) {
       </div>
 
       <CardHeader className="pb-2">
-        <Link href={`/starter-kit/${kit.id}`}>
+        {/* Link aggiornato con finalHref */}
+        <Link href={finalHref}>
           <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
             {kit.title}
           </h3>
@@ -79,7 +84,8 @@ export function StarterKitCard({ kit }: StarterKitCardProps) {
 
       <CardFooter className="gap-2">
         <Button size="sm" className="gap-1.5 flex-1" asChild>
-          <Link href={`/starter-kit/${kit.id}`}>
+          {/* Link del bottone aggiornato con finalHref */}
+          <Link href={finalHref}>
             Esplora
             <ArrowRight className="h-4 w-4" />
           </Link>

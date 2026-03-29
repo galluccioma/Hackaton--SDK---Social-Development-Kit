@@ -123,7 +123,7 @@ export default function HomePage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {displayKits.map((kit) => (
-              <StarterKitCard key={kit.id} kit={kit} />
+              <StarterKitCard key={kit.id} kit={kit} customUrl="/grazie"/>
             ))}
           </div>
         </section>
