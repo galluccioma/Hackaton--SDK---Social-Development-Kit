@@ -78,10 +78,6 @@ export function StarterKitCard({ kit }: StarterKitCardProps) {
       </CardContent>
 
       <CardFooter className="gap-2">
-        <Button variant="outline" size="sm" className="gap-1.5 flex-1">
-          <Download className="h-4 w-4" />
-          Scarica
-        </Button>
         <Button size="sm" className="gap-1.5 flex-1" asChild>
           <Link href={`/starter-kit/${kit.id}`}>
             Esplora

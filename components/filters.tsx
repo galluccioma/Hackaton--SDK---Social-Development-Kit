@@ -63,7 +63,7 @@ export function Filters({ filters, onFilterChange, onReset }: FiltersProps) {
 
       {/* Difficulty */}
       <div className="flex flex-col gap-1.5">
-        <Label className="text-xs text-muted-foreground">Complessità</Label>
+        <Label className="text-xs text-muted-foreground">Complessità di realizzazione</Label>
         <Select
           value={filters.difficulty}
           onValueChange={(value) => onFilterChange({ ...filters, difficulty: value })}
