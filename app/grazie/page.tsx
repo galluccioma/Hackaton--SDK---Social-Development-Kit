@@ -28,7 +28,7 @@ export default function SuccessPage() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-bold text-primary-foreground text-lg">S</div>
-            <span className="font-bold tracking-tight">SDK</span>
+            <span className="font-bold tracking-tight">KIT&GO</span>
           </Link>
           <Link href="/landing" className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">
             <ArrowLeft className="h-4 w-4" /> Torna alla landing
@@ -150,7 +150,7 @@ export default function SuccessPage() {
       </main>
 
       <footer className="py-8 border-t text-center text-xs text-muted-foreground mt-auto">
-        © 2024 SDK - Social Development Kit | Torino, Italia
+        © 2024 KIT&GO - Social Development Kit | Torino, Italia
       </footer>
     </div>
   )

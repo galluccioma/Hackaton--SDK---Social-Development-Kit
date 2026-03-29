@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'SDK - Social Development Kit | Attività di quartiere',
+  title: 'KIT&GO - Social Development Kit | Attività di quartiere',
   description: 'Social Development Kit: scarica starter kit, trova collaboratori e lancia eventi locali nella tua comunità',
   generator: 'v0.app',
   icons: {

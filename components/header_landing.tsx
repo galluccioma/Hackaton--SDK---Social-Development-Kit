@@ -26,7 +26,7 @@ export function Header() {
             S
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold leading-none tracking-tight">SDK</span>
+            <span className="text-lg font-bold leading-none tracking-tight">KIT&GO</span>
             <span className="text-[10px] text-muted-foreground leading-tight">Social Development Kit</span>
           </div>
         </Link>

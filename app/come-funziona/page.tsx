@@ -87,7 +87,7 @@ export default function ComeFunzionaPage() {
               Da un&apos;idea a un evento nel tuo quartiere
             </h1>
             <p className="mt-6 text-pretty text-lg text-muted-foreground">
-              <strong>SDK</strong> sta per <strong>Social Development Kit</strong>: 
+              <strong>KIT&GO</strong> sta per <strong>Social Development Kit</strong>: 
               un insieme di strumenti e risorse per aiutarti a organizzare attività 
               locali e creare connessioni autentiche nella tua comunità.
             </p>
@@ -97,7 +97,7 @@ export default function ComeFunzionaPage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
       </section>
 
-      {/* What is SDK Section */}
+      {/* What is KIT&GO Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
@@ -118,7 +118,7 @@ export default function ComeFunzionaPage() {
                 </p>
                 <p>
                   La cosa più importante? <strong className="text-foreground">Non devi fare tutto da solo</strong>. 
-                  SDK ti aiuta a trovare altri giovani del tuo quartiere che vogliono 
+                  KIT&GO ti aiuta a trovare altri giovani del tuo quartiere che vogliono 
                   collaborare. Insieme potete dividere i compiti e rendere l&apos;organizzazione 
                   più semplice e divertente.
                 </p>
@@ -190,7 +190,7 @@ export default function ComeFunzionaPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">Perché usare SDK?</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">Perché usare KIT&GO?</h2>
             <p className="mt-4 text-muted-foreground">
               Vantaggi concreti per te e il tuo quartiere
             </p>
@@ -248,7 +248,7 @@ export default function ComeFunzionaPage() {
                 S
               </div>
               <div className="flex flex-col">
-                <span className="font-semibold leading-none">SDK</span>
+                <span className="font-semibold leading-none">KIT&GO</span>
                 <span className="text-xs text-muted-foreground">Social Development Kit</span>
               </div>
             </div>

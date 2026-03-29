@@ -79,7 +79,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-background px-4 py-1.5 text-sm shadow-sm">
               <Sparkles className="h-4 w-4 text-primary" />
-              <span className="font-medium">SDK</span>
+              <span className="font-medium">KIT&GO</span>
               <span className="text-muted-foreground">=</span>
               <span className="text-muted-foreground">Social Development Kit</span>
             </div>
@@ -196,7 +196,7 @@ export default function HomePage() {
             <div className="flex items-center gap-2.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary font-bold text-primary-foreground text-xl">S</div>
               <div className="flex flex-col">
-                <span className="font-bold leading-none tracking-tight">SDK</span>
+                <span className="font-bold leading-none tracking-tight">KIT&GO</span>
                 <span className="text-xs text-muted-foreground">Social Development Kit</span>
               </div>
             </div>

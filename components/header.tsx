@@ -22,11 +22,8 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary font-bold text-primary-foreground">
-            S
-          </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold leading-none tracking-tight">SDK</span>
+            <span className="text-lg font-bold leading-none tracking-tight">KIT<span className="text-primary">&</span>GO</span>
             <span className="text-[10px] text-muted-foreground leading-tight">Social Development Kit</span>
           </div>
         </Link>

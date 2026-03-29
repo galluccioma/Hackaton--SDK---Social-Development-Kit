@@ -204,7 +204,7 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
                 S
               </div>
               <div className="flex flex-col">
-                <span className="font-semibold leading-none">SDK</span>
+                <span className="font-semibold leading-none">KIT&GO</span>
                 <span className="text-xs text-muted-foreground">Social Development Kit</span>
               </div>
             </div>
