@@ -102,7 +102,7 @@ export const starterKits: StarterKit[] = [
     difficulty: "easy",
     estimatedParticipants: "15-30",
     duration: "1 giorno",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
+    image: "/img/swap-party.jpg",
     steps: [
       "Trova uno spazio adatto (cortile, sala comune)",
       "Crea le regole dello swap party",
@@ -272,7 +272,7 @@ export const pendingProjects: PendingProject[] = [
     likes: 56,
     status: "in-partenza",
     plannedActivity: "Realizzazione di 3 murales su muri autorizzati. Workshop aperti a tutti per imparare le tecniche.",
-    image: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=800&auto=format&fit=crop",
+    image: "/img/murales.jpg",
   },
 ]
 
