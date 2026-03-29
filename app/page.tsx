@@ -77,7 +77,7 @@ export default function HomePage() {
               </span>
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-balance">
-              Costruisci comunità nel tuo{" "}
+              Crea iniziative nel tuo{" "}
               <span className="text-primary">quartiere</span>
             </h1>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl text-pretty">
