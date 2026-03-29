@@ -1,12 +1,12 @@
-import { notFound } from "next/navigation"
-import Image from "next/image"
-import Link from "next/link"
-import { Header } from "@/components/header"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { starterKits, type Difficulty } from "@/lib/data"
-import { KitMapSection } from "@/components/kit-map-section"
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/header";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { starterKits, type Difficulty } from "@/lib/data";
+import { KitMapSection } from "@/components/kit-map-section";
 
 import {
   ArrowLeft,
@@ -16,27 +16,39 @@ import {
   CheckCircle2,
   Rocket,
   UserPlus,
-} from "lucide-react"
+} from "lucide-react";
 
-const difficultyConfig: Record<Difficulty, { label: string; className: string }> = {
-  easy: { label: "Facile", className: "bg-green-100 text-green-800 border-green-200" },
-  medium: { label: "Medio", className: "bg-amber-100 text-amber-800 border-amber-200" },
-  hard: { label: "Difficile", className: "bg-red-100 text-red-800 border-red-200" },
-}
+const difficultyConfig: Record<
+  Difficulty,
+  { label: string; className: string }
+> = {
+  easy: {
+    label: "Facile",
+    className: "bg-green-100 text-green-800 border-green-200",
+  },
+  medium: {
+    label: "Medio",
+    className: "bg-amber-100 text-amber-800 border-amber-200",
+  },
+  hard: {
+    label: "Difficile",
+    className: "bg-red-100 text-red-800 border-red-200",
+  },
+};
 
 interface PageProps {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 }
 
 export default async function StarterKitDetailPage({ params }: PageProps) {
-  const { id } = await params
-  const kit = starterKits.find((k) => k.id === id)
+  const { id } = await params;
+  const kit = starterKits.find((k) => k.id === id);
 
   if (!kit) {
-    notFound()
+    notFound();
   }
 
-  const difficulty = difficultyConfig[kit.difficulty]
+  const difficulty = difficultyConfig[kit.difficulty];
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,8 +71,7 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
           <div className="relative -mt-32 pb-8">
             <Link
               href="/"
-              className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
-            >
+              className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
               <ArrowLeft className="h-4 w-4" />
               Torna alla home
             </Link>
@@ -73,8 +84,12 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
                 </Badge>
               </div>
 
-              <h1 className="mb-4 mt-4 text-3xl font-bold md:text-4xl text-balance">{kit.title}</h1>
-              <p className="mb-6 text-lg text-muted-foreground">{kit.description}</p>
+              <h1 className="mb-4 mt-4 text-3xl font-bold md:text-4xl text-balance">
+                {kit.title}
+              </h1>
+              <p className="mb-6 text-lg text-muted-foreground">
+                {kit.description}
+              </p>
 
               <div className="mb-6 flex flex-wrap gap-6">
                 <div className="flex items-center gap-2">
@@ -82,7 +97,9 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
                     <Users className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Partecipanti</p>
+                    <p className="text-sm text-muted-foreground">
+                      Partecipanti
+                    </p>
                     <p className="font-semibold">{kit.estimatedParticipants}</p>
                   </div>
                 </div>
@@ -116,6 +133,31 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
       <section className="container mx-auto px-4 py-8">
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="lg:col-span-2">
+            {/* Mappa aggiunta qui, isolata come Client Component */}
+            <KitMapSection />
+          </div>
+
+          <div className="space-y-6">
+            {/* Download Toolkit */}
+            <Card className="border-primary/20 bg-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Download className="h-5 w-5" />
+                  Scarica il toolkit
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  Il toolkit include template, checklist e materiali pronti
+                  all&apos;uso per organizzare la tua attività.
+                </p>
+                <Button className="w-full gap-2">
+                  <Download className="h-4 w-4" />
+                  Download PDF
+                </Button>
+              </CardContent>
+            </Card>
+            {/* Guida Passo Passo */}
             <Card>
               <CardHeader>
                 <CardTitle className="text-xl">Guida passo-passo</CardTitle>
@@ -135,32 +177,6 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
                 </ol>
               </CardContent>
             </Card>
-
-            {/* Mappa aggiunta qui, isolata come Client Component */}
-            <KitMapSection />
-          </div>
-
-          <div className="space-y-6">
-            {/* Download Toolkit */}
-            <Card className="border-primary/20 bg-primary/5">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-lg">
-                  <Download className="h-5 w-5" />
-                  Scarica il toolkit
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 text-sm text-muted-foreground">
-                  Il toolkit include template, checklist e materiali pronti all&apos;uso per
-                  organizzare la tua attività.
-                </p>
-                <Button className="w-full gap-2">
-                  <Download className="h-4 w-4" />
-                  Download PDF
-                </Button>
-              </CardContent>
-            </Card>
-
             {/* What&apos;s Included */}
             <Card>
               <CardHeader>
@@ -205,17 +221,31 @@ export default async function StarterKitDetailPage({ params }: PageProps) {
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold leading-none">SDK</span>
-                <span className="text-xs text-muted-foreground">Social Development Kit</span>
+                <span className="text-xs text-muted-foreground">
+                  Social Development Kit
+                </span>
               </div>
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <Link href="#" className="hover:text-foreground transition-colors">Chi siamo</Link>
-              <Link href="#" className="hover:text-foreground transition-colors">Contatti</Link>
-              <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
+              <Link
+                href="#"
+                className="hover:text-foreground transition-colors">
+                Chi siamo
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-foreground transition-colors">
+                Contatti
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-foreground transition-colors">
+                Privacy
+              </Link>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
